@@ -144,7 +144,7 @@ table {
 
 .header {
   background-image: url("../images/Hero.png");
-  min-height: 380px;
+  height: 380px;
 
   display: flex;
   flex-direction: column;
@@ -172,7 +172,7 @@ table {
 .kTravelTitle span {
   font-size: 40px;
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .kTravelTitle {
     text-align: center;
     font-size: 70px;
@@ -207,7 +207,7 @@ table {
   -webkit-appearance: none;
   -moz-appearance: none;
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   #kDistrictSelect {
     width: 50%;
   }
@@ -227,15 +227,21 @@ table {
 }
 
 .container {
-  max-width: 960px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
+@media(max-width: 2000px){
+  .container {
+    max-width: 960px;
+  }
+}
+
 .hotDistrict {
   margin-top: -28px;
-  width: 800px;
+  max-width: 800px;
   height: 112px;
   background: #ffffff;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
@@ -255,19 +261,21 @@ table {
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  padding-right: 25px;
+  padding-left: 25px;
 }
 
 .hotDistrictList li {
   border-radius: 5px;
   text-align: center;
   margin-top: 14px;
-  margin-right: -28px;
-  margin-left: 51px;
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .hotDistrictListLink {
   display: block;
-  min-width: 130px;
+  width: 130px;
   height: 42px;
 
   text-decoration: none;
@@ -275,7 +283,9 @@ table {
   color: #ffffff;
   padding: 11px;
 }
-@media (max-width: 768px) {
+/* min-width：大於某寬度 */
+/* max-width 小於某寬度 */
+@media (max-width: 769px) {
   .hotDistrict {
     width: 100%;
     height: 100%;
@@ -303,7 +313,7 @@ table {
   margin-top: 37px;
   margin-bottom: 65px;
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .separationLine {
     width: 100%;
   }
@@ -390,7 +400,7 @@ table {
   margin-left: 8px;
   margin-right: 8px;
 }
-@media (max-width: 768px) {
+@media (max-width: 769px) {
   .districtCard {
     width: 100%;
     margin-top: 20px;
