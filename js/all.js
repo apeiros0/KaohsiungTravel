@@ -44,7 +44,7 @@
         }
 
         // 排除陣列的重複元素
-        // filter 過濾符合條件的元素，若不符合則刪除 (不更改原陣列，而回傳新陣列)
+        // filter (陣列的 prototype method) 過濾符合條件的元素，若不符合則刪除 (不更改原陣列，而回傳新陣列)
         let result = district.filter(function (element, index, array) {
             // arr.indexOf(element) 找出陣列的位置 (重複的以同樣的 index 取代)
             // 陣列的 index (0....arr.length)
