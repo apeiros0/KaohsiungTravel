@@ -13,8 +13,6 @@
 
 
 
-    // 資料總筆數
-    let totalPages = 0;
     // 當前頁
     let pageNum = 1;
     // 每一個分頁顯示的數量 -> 4 筆
@@ -22,7 +20,7 @@
     // 頁碼數量
     let pageLeng = 0;
     // 限制的頁數
-    let limitPage = 5;
+    // let limitPage = 5;
 
     // -------------------------------------------------------------
     // ajax 載入資料
@@ -115,26 +113,25 @@
     // 更新各區景點
     function displayDistrict() {
         let str = ``;
-        let counter = 0;
 
-        // 選取開始的陣列位置 -> 頁碼乘以每頁顯示數量
+        // 選取開始的陣列位置 -> 頁碼 乘以 每頁顯示數量
         let start = pageNum * contentNum;
+        // 資料總長度
         let dataLen = displayData.length;
 
-        // 頁數
+        // 計算、顯示有多少頁碼
         calPagesNum(dataLen);
-        totalPages = dataLen;
 
-        // 如果長度大於 dataLen，以 start 作為停止條件
+
+        // 如果 資料長度大於 start，以 start 作為 for 的停止條件
         if (dataLen > start) {
             dataLen = start;
         } else {
             dataLen = displayData.length;
         }
 
-        // 以 start - 每頁顯示數量座位開始條件
+        // 以 start - 每頁顯示數量 作為起始值，再依據條件顯示相應的資料 (0-4、4-8、8-12 ... 筆資料)
         for (let i = start - contentNum; i < dataLen; i++) {
-            counter++;
             // 顯示筆數
             str +=
                 `<div class="districtCard">
@@ -171,7 +168,7 @@
     }
 
     // -------------------------------------------------------------
-    // 計算頁數
+    // 計算、顯示頁碼
     function calPagesNum(counter) {
         if (counter > contentNum) {
             // Math.ceil() 最小整數：取大於這個數的最小整數
@@ -185,7 +182,9 @@
             //     pageLeng = limitPage;
             // } 
 
+            // 加進頁碼
             for (let i = 1; i <= pageLeng; i++) {
+                // 顯示當下的頁碼
                 if (i == pageNum) {
                     str += `<li class="pageItem"><a class="pageLink active" href="#">${i}</a></li>`;
                 } else {
@@ -225,8 +224,6 @@
         else {
             pageNum = parseInt(e.target.textContent);
         }
-
-        calPagesNum(totalPages);
 
         // 更新資料
         displayDistrict();
