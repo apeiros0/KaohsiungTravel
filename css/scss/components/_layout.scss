@@ -6,7 +6,7 @@
 
 .header {
   // 加 / 能夠直接找到路徑 
-  background-image: url("../images/Hero.png");
+  background-image: url("/images/Hero.png");
   height: 380px;
 
   display: $d-flex;
