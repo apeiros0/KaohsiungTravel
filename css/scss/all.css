@@ -147,7 +147,7 @@ table {
 }
 
 .header {
-  background-image: url("/images/Hero.png");
+  background-image: url("../../images/Hero.png");
   height: 380px;
   display: -webkit-box;
   display: -ms-flexbox;
