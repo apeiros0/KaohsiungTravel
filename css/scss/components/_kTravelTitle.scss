@@ -1,0 +1,55 @@
+.kTravelTitle {
+  display: $d-block;
+  font-size: 80px;
+  color: $light;
+  font-weight: $font-weight-bold;
+  padding: 65px;
+
+  span {
+    font-size: 40px;
+  }
+}
+
+@media (max-width: 769px) {
+  .kTravelTitle {
+    text-align: $text-align-center;
+    font-size: 70px;
+    padding: 59px;
+
+    span {
+      display: $d-block;
+      font-size: 35px;
+    }
+  }
+}
+
+#kDistrictSelect {
+  width: 30%;
+  background: rgba(255, 255, 255, 0.7);
+  border: 3px solid $light;
+  border-radius: 3px;
+
+  margin-top: 7px;
+  padding: 12px;
+
+  font-size: $font-size-l;
+  font-weight: $font-weight-bold;
+  color: $dark;
+  line-height: 21px;
+
+  cursor: pointer;
+
+  /* 移除箭頭樣式 */
+  appearance: $none;
+  -webkit-appearance: $none;
+  -moz-appearance: $none;
+
+  &:focus {
+    outline: $none;
+  }
+}
+@media (max-width: 769px) {
+  #kDistrictSelect {
+    width: 50%;
+  }
+}

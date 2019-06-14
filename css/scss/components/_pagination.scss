@@ -1,0 +1,64 @@
+/* pagination */
+.pagination {
+  display: $d-flex;
+  margin-top: 39px;
+  margin-bottom: 39px;
+  flex-wrap: wrap;
+  justify-content: $justify-content-center;
+}
+
+.pagePrev,
+.pageNext {
+  width: 50px;
+  height: 24px;
+  text-align: $text-align-center;
+
+  margin-left: 18px;
+  margin-right: 18px;
+
+  & a {
+    display: block;
+    padding: 5px;
+    font-size: $font-size-s;
+    color: #4a4a4a;
+    text-decoration: $none;
+
+    &:hover {
+      color: $primary;
+      font-weight: $font-weight-bold;
+    }
+  }
+}
+
+.pageItem {
+  text-align: $text-align-center;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.pageLink {
+  display: block;
+  width: 25px;
+  height: 25px;
+  padding: 5px;
+  font-size: $font-size-s;
+  color: #4a4a4a;
+  text-decoration: $none;
+  border-radius: 50%;
+
+  &:hover {
+    background-color: $primary;
+    color: $light;
+    font-weight: $font-weight-bold;
+    transition: all 0.4s;
+  }
+
+  &.active {
+    pointer-events: $none;
+    cursor: default;
+    background-color: $primary;
+    border-radius: 50%;
+    color: $light;
+    font-weight: $font-weight-bold;
+  }
+}

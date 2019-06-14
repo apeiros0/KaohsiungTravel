@@ -1,0 +1,16 @@
+/* goTop */
+.goTop {
+  display: $d-none;
+  position: fixed;
+  bottom: 150px;
+  right: 380px;
+  cursor: pointer;
+}
+
+@media (max-width: 1600px) {
+  .goTop {
+    display: $d-none;
+    bottom: 30px;
+    right: 25px;
+  }
+}

@@ -1,0 +1,67 @@
+.hotDistrict {
+  margin-top: -28px;
+  max-width: 800px;
+  height: 112px;
+  background: $light;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+
+  h2 {
+    font-size: $font-size-l;
+    color: $dark;
+    font-weight: $font-weight-bold;
+
+    margin-top: 20px;
+    margin-left: 26px;
+  }
+}
+
+.hotDistrictList {
+  display: $d-flex;
+  justify-content: flex-start;
+  align-items: $align-items-center;
+  padding-right: 25px;
+  padding-left: 25px;
+
+  li {
+    border-radius: 5px;
+    text-align: $text-align-center;
+    margin-top: 14px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+.hotDistrictListLink {
+  display: $d-block;
+  width: 130px;
+  height: 42px;
+  text-decoration: $none;
+  font-size: 20px;
+  color: $light;
+  padding: 11px;
+}
+
+/* min-width：大於某寬度 */
+/* max-width 小於某寬度 */
+@media (max-width: 769px) {
+  .hotDistrict {
+    width: $w-100;
+    height: $h-100;
+  }
+  .hotDistrictList {
+    flex-wrap: wrap;
+    padding: 20px;
+
+    li {
+      width: $w-100;
+      margin-right: 0px;
+      margin-left: 0px;
+    }
+  }
+
+  .hotDistrictListLink {
+    display: $d-block;
+    width: $w-100;
+  }
+}

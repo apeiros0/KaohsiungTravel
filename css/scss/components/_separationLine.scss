@@ -1,0 +1,70 @@
+.separationLine {
+  width: 900px;
+  margin-top: 37px;
+  margin-bottom: 65px;
+}
+@media (max-width: 769px) {
+  .separationLine {
+    width: $w-100;
+  }
+}
+
+.line {
+  border: 1px groove $dark;
+  position: relative;
+
+  display: $d-flex;
+  justify-content: $justify-content-center;
+  align-items: $align-items-center;
+  animation: change 5s infinite;
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    width: 24px;
+    height: 24px;
+    border: $border-solid $dark;
+    border-radius: 50%;
+
+    animation: change 5s infinite;
+  }
+
+  img {
+    position: absolute;
+    z-index: 1;
+
+    animation: spin 4s linear infinite;
+  }
+}
+
+/* animation change color */
+@keyframes change {
+  0% {
+    border: $border-solid $primary;
+    background: $primary;
+  }
+  20% {
+    border: $border-solid $secondary;
+    background: $secondary;
+  }
+  60% {
+    border: $border-solid $warning;
+    background: $warning;
+  }
+  80% {
+    border: $border-solid $danger;
+    background: $danger;
+  }
+  100% {
+    border: $border-solid $primary;
+    background: $primary;
+  }
+}
+
+/* animation 旋轉 */
+@keyframes spin {
+  50% {
+    transform: rotateY(360deg);
+  }
+}

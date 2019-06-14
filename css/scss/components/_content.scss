@@ -1,0 +1,20 @@
+/* content */
+.content {
+  background-color: $content-bg-color;
+  display: $d-flex;
+  flex-direction: $flex-direction-column;
+  align-items: $align-items-center;
+}
+
+.container {
+  width: $w-100;
+  display: $d-flex;
+  flex-direction: $flex-direction-column;
+  align-items: $align-items-center;
+}
+
+@media (max-width: 2000px) {
+  .container {
+    max-width: 960px;
+  }
+}

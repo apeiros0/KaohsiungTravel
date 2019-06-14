@@ -1,0 +1,83 @@
+/* Card */
+.districtCard {
+  width: 464px;
+  height: $h-100;
+  margin-top: 36px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+@media (max-width: 769px) {
+  .districtCard {
+    width: $w-100;
+    margin-top: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+.cardHeader {
+  width: $w-100;
+  height: 155px;
+  display: $d-flex;
+  align-items: flex-end;
+  justify-content: $justify-content-between;
+
+  padding: 14px 22px;
+
+  h2 {
+    font-size: 24px;
+    color: $light;
+    font-weight: $font-weight-bold;
+  }
+
+  p {
+    font-size: $font-size-base;
+    color: $light;
+  }
+}
+
+.cardBody {
+  /* height: 118px; */
+
+  height: $h-100;
+  background: $light;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+
+  padding-right: 23px;
+  padding-left: 23px;
+
+  display: $d-flex;
+  flex-direction: $flex-direction-column;
+  justify-content: $justify-content-center;
+}
+
+.districtInfo {
+  padding-top: 16px;
+  display: $d-flex;
+  align-items: $align-items-center;
+
+  p {
+    display: $d-block;
+    font-size: $font-size-base;
+    color: $dark;
+    margin-left: 9px;
+    line-height: 1.5;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+
+/* 增加 div 控制圖片外圍寬高 */
+.infoImg {
+  width: 20px;
+  height: 20px;
+  text-align: $text-align-center;
+}
+
+.positionSet {
+  display: $d-flex;
+  justify-content: $justify-content-between;
+  padding-bottom: 19px;
+}

@@ -1,0 +1,24 @@
+/* layout */
+.wrap {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.header {
+  // 加 / 能夠直接找到路徑 
+  background-image: url("/images/Hero.png");
+  height: 380px;
+
+  display: $d-flex;
+  flex-direction: $flex-direction-column;
+  align-items: $align-items-center;
+}
+
+.footer {
+  height: 90px;
+  background: $primary;
+  display: $d-flex;
+  flex-direction: $flex-direction-column;
+  align-items: $align-items-center;
+  justify-content: $justify-content-center;
+}

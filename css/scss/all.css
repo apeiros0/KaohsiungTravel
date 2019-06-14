@@ -1,0 +1,676 @@
+@charset "UTF-8";
+/* css reset */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* box-sizing & font */
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-family: "Microsoft JhengHei" !important;
+  /* 有無跑版技巧 */
+  /* outline: 1px solid #00f; */
+}
+
+/* layout */
+.wrap {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+.header {
+  background-image: url("/images/Hero.png");
+  height: 380px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer {
+  height: 90px;
+  background: #559ac8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.kTravelTitle {
+  display: block;
+  font-size: 80px;
+  color: #ffffff;
+  font-weight: bold;
+  padding: 65px;
+}
+
+.kTravelTitle span {
+  font-size: 40px;
+}
+
+@media (max-width: 769px) {
+  .kTravelTitle {
+    text-align: center;
+    font-size: 70px;
+    padding: 59px;
+  }
+  .kTravelTitle span {
+    display: block;
+    font-size: 35px;
+  }
+}
+
+#kDistrictSelect {
+  width: 30%;
+  background: rgba(255, 255, 255, 0.7);
+  border: 3px solid #ffffff;
+  border-radius: 3px;
+  margin-top: 7px;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #000000;
+  line-height: 21px;
+  cursor: pointer;
+  /* 移除箭頭樣式 */
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+#kDistrictSelect:focus {
+  outline: none;
+}
+
+@media (max-width: 769px) {
+  #kDistrictSelect {
+    width: 50%;
+  }
+}
+
+.kTravelFooter {
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.kTravelSource {
+  margin-top: 15px;
+  font-size: 14px;
+  color: #ffd366;
+}
+
+/* content */
+.content {
+  background-color: #f5f5f5;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.container {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 2000px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+.districtContent {
+  width: 100%;
+  margin-bottom: 39px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.districtName {
+  font-size: 36px;
+  color: #8a82cc;
+  text-align: center;
+}
+
+.hotDistrict {
+  margin-top: -28px;
+  max-width: 800px;
+  height: 112px;
+  background: #ffffff;
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
+}
+
+.hotDistrict h2 {
+  font-size: 18px;
+  color: #000000;
+  font-weight: bold;
+  margin-top: 20px;
+  margin-left: 26px;
+}
+
+.hotDistrictList {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-right: 25px;
+  padding-left: 25px;
+}
+
+.hotDistrictList li {
+  border-radius: 5px;
+  text-align: center;
+  margin-top: 14px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+
+.hotDistrictListLink {
+  display: block;
+  width: 130px;
+  height: 42px;
+  text-decoration: none;
+  font-size: 20px;
+  color: #ffffff;
+  padding: 11px;
+}
+
+/* min-width：大於某寬度 */
+/* max-width 小於某寬度 */
+@media (max-width: 769px) {
+  .hotDistrict {
+    width: 100%;
+    height: 100%;
+  }
+  .hotDistrictList {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 20px;
+  }
+  .hotDistrictList li {
+    width: 100%;
+    margin-right: 0px;
+    margin-left: 0px;
+  }
+  .hotDistrictListLink {
+    display: block;
+    width: 100%;
+  }
+}
+
+/* Card */
+.districtCard {
+  width: 464px;
+  height: 100%;
+  margin-top: 36px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+@media (max-width: 769px) {
+  .districtCard {
+    width: 100%;
+    margin-top: 20px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+}
+
+.cardHeader {
+  width: 100%;
+  height: 155px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 14px 22px;
+}
+
+.cardHeader h2 {
+  font-size: 24px;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.cardHeader p {
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.cardBody {
+  /* height: 118px; */
+  height: 100%;
+  background: #ffffff;
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+          box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  padding-right: 23px;
+  padding-left: 23px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.districtInfo {
+  padding-top: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.districtInfo p {
+  display: block;
+  font-size: 16px;
+  color: #000000;
+  margin-left: 9px;
+  line-height: 1.5;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* 增加 div 控制圖片外圍寬高 */
+.infoImg {
+  width: 20px;
+  height: 20px;
+  text-align: center;
+}
+
+.positionSet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-bottom: 19px;
+}
+
+/* pagination */
+.pagination {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 39px;
+  margin-bottom: 39px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.pagePrev,
+.pageNext {
+  width: 50px;
+  height: 24px;
+  text-align: center;
+  margin-left: 18px;
+  margin-right: 18px;
+}
+
+.pagePrev a,
+.pageNext a {
+  display: block;
+  padding: 5px;
+  font-size: 14px;
+  color: #4a4a4a;
+  text-decoration: none;
+}
+
+.pagePrev a:hover,
+.pageNext a:hover {
+  color: #559ac8;
+  font-weight: bold;
+}
+
+.pageItem {
+  text-align: center;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.pageLink {
+  display: block;
+  width: 25px;
+  height: 25px;
+  padding: 5px;
+  font-size: 14px;
+  color: #4a4a4a;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.pageLink:hover {
+  background-color: #559ac8;
+  color: #ffffff;
+  font-weight: bold;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.pageLink.active {
+  pointer-events: none;
+  cursor: default;
+  background-color: #559ac8;
+  border-radius: 50%;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+.separationLine {
+  width: 900px;
+  margin-top: 37px;
+  margin-bottom: 65px;
+}
+
+@media (max-width: 769px) {
+  .separationLine {
+    width: 100%;
+  }
+}
+
+.line {
+  border: 1px groove #000000;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-animation: change 5s infinite;
+          animation: change 5s infinite;
+}
+
+.line::after {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  -webkit-animation: change 5s infinite;
+          animation: change 5s infinite;
+}
+
+.line img {
+  position: absolute;
+  z-index: 1;
+  -webkit-animation: spin 4s linear infinite;
+          animation: spin 4s linear infinite;
+}
+
+/* animation change color */
+@-webkit-keyframes change {
+  0% {
+    border: 2px solid #559ac8;
+    background: #559ac8;
+  }
+  20% {
+    border: 2px solid #8a82cc;
+    background: #8a82cc;
+  }
+  60% {
+    border: 2px solid #f5d005;
+    background: #f5d005;
+  }
+  80% {
+    border: 2px solid #ffa782;
+    background: #ffa782;
+  }
+  100% {
+    border: 2px solid #559ac8;
+    background: #559ac8;
+  }
+}
+@keyframes change {
+  0% {
+    border: 2px solid #559ac8;
+    background: #559ac8;
+  }
+  20% {
+    border: 2px solid #8a82cc;
+    background: #8a82cc;
+  }
+  60% {
+    border: 2px solid #f5d005;
+    background: #f5d005;
+  }
+  80% {
+    border: 2px solid #ffa782;
+    background: #ffa782;
+  }
+  100% {
+    border: 2px solid #559ac8;
+    background: #559ac8;
+  }
+}
+
+/* animation 旋轉 */
+@-webkit-keyframes spin {
+  50% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+@keyframes spin {
+  50% {
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
+  }
+}
+
+/* goTop */
+.goTop {
+  display: none;
+  position: fixed;
+  bottom: 150px;
+  right: 380px;
+  cursor: pointer;
+}
+
+@media (max-width: 1600px) {
+  .goTop {
+    display: none;
+    bottom: 30px;
+    right: 25px;
+  }
+}
+
+/* utilities */
+.bgCover {
+  background-size: cover;
+  background-position: center center;
+}
+/*# sourceMappingURL=all.css.map */
