@@ -41,8 +41,8 @@
   padding: 11px;
 }
 
-/* min-width：大於某寬度 */
-/* max-width 小於某寬度 */
+/* min-width：大於某寬度 (有包括設定的寬度) */
+/* max-width：小於某寬度 (有包括設定的寬度) */
 @include ipad {
   .hot-district {
     width: $w-100;
