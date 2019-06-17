@@ -123,14 +123,3 @@ table {
   border-collapse: collapse;
   border-spacing: 0;
 }
-
-/* box-sizing & font */
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  font-family: "Microsoft JhengHei" !important;
-
-  /* 有無跑版技巧 */
-  /* outline: 1px solid #00f; */
-}

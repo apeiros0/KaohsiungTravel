@@ -6,7 +6,7 @@
   margin-left: 8px;
   margin-right: 8px;
 }
-@media (max-width: 769px) {
+@include ipad {
   .district-card {
     width: $w-100;
     margin-top: 20px;
@@ -22,6 +22,7 @@
   align-items: flex-end;
   justify-content: space-between;
   padding: 14px 22px;
+  @include bg-cover;
 
   h2 {
     font-size: 24px;
@@ -61,6 +62,7 @@
     color: $dark;
     margin-left: 9px;
     line-height: 1.5;
+    @include text-omit;
   }
 }
 

@@ -1,0 +1,5 @@
+@mixin ipad {
+    @media (max-width: 769px) {
+        @content
+    }
+}

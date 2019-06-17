@@ -7,7 +7,7 @@
   cursor: pointer;
 }
 
-@media (max-width: 1600px) {
+@include ipad {
   .go-top {
     bottom: 30px;
     right: 25px;

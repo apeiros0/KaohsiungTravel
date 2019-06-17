@@ -3,7 +3,7 @@
   margin-top: 37px;
   margin-bottom: 65px;
 }
-@media (max-width: 769px) {
+@include ipad {
   .separation-line {
     width: $w-100;
   }
@@ -24,7 +24,7 @@
 
     width: 24px;
     height: 24px;
-    border: $border-solid $dark;
+    border: 2px solid $dark;
     border-radius: 50%;
 
     animation: change 5s infinite;
@@ -41,24 +41,19 @@
 /* animation change color */
 @keyframes change {
   0% {
-    border: $border-solid $primary;
-    background: $primary;
+    @include line-color-change($primary);
   }
   20% {
-    border: $border-solid $secondary;
-    background: $secondary;
+    @include line-color-change($secondary);
   }
   60% {
-    border: $border-solid $warning;
-    background: $warning;
+    @include line-color-change($warning);
   }
   80% {
-    border: $border-solid $danger;
-    background: $danger;
+    @include line-color-change($danger);
   }
   100% {
-    border: $border-solid $primary;
-    background: $primary;
+    @include line-color-change($primary);
   }
 }
 

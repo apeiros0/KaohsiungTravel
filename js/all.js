@@ -135,7 +135,7 @@
             // 顯示筆數
             str +=
                 `<div class="district-card">
-                <div class="card-header bg-cover" style="background-image: url('${ displayData[i].Picture1}');">
+                <div class="card-header" style="background-image: url('${ displayData[i].Picture1}');">
                     <h2>${ displayData[i].Name}</h2>
                     <p>${ displayData[i].Zone}</p>                     
                 </div>
@@ -143,22 +143,22 @@
                 <div class="card-body">
                     <div class="district-info">
                         <div class="info-img"><img src="images/icons_clock.png" alt="icons_clock"></div>
-                        <p class="text-omit">${ displayData[i].Opentime}</p>
+                        <p>${ displayData[i].Opentime}</p>
                     </div>
 
                     <div class="district-info">
                     <div class="info-img"><img src="images/icons_pin.png" alt="icons_pin"></div>
-                    <p class="text-omit">${ displayData[i].Add}</p>
+                    <p>${ displayData[i].Add}</p>
                     </div>
                 
                     <div class="position-set">
                         <div class="district-info">
                             <div class="info-img"><img src="images/icons_phone.png" alt="icons_phone"></div>
-                            <p class="text-omit">${ displayData[i].Tel}</p>  
+                            <p>${ displayData[i].Tel}</p>  
                         </div>
                         <div class="district-info">
                             <div class="info-img"><img src="images/icons_tag.png" alt="icons_tag"></div>
-                            <p class="text-omit">${ displayData[i].Ticketinfo}</p>
+                            <p>${ displayData[i].Ticketinfo}</p>
                         </div>
                     </div>
                 </div>

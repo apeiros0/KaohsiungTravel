@@ -43,7 +43,7 @@
 
 /* min-width：大於某寬度 */
 /* max-width 小於某寬度 */
-@media (max-width: 769px) {
+@include ipad {
   .hot-district {
     width: $w-100;
     height: $h-100;

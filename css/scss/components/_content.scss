@@ -1,13 +1,15 @@
 /* content */
 .content {
   background-color: $content-bg-color;
+  @include flex-column;
 }
 
 .container {
   width: $w-100;
+  @include flex-column;
 }
 
-@media (max-width: 2000px) {
+@media (min-width: 769px) {
   .container {
     max-width: 960px;
   }
