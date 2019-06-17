@@ -140,6 +140,36 @@ table {
   /* outline: 1px solid #00f; */
 }
 
+.bg-cover {
+  background-size: cover;
+  background-position: center center;
+}
+
+.text-hide {
+  text-indent: 101%;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.flex-column {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.text-omit {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 /* layout */
 .wrap {
   width: 1024px;
@@ -149,37 +179,17 @@ table {
 .header {
   background-image: url("../../images/Hero.png");
   height: 380px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .footer {
   height: 90px;
   background: #559ac8;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
 }
 
-.kTravelTitle {
+.k-travel-title {
   display: block;
   font-size: 80px;
   color: #ffffff;
@@ -187,23 +197,23 @@ table {
   padding: 65px;
 }
 
-.kTravelTitle span {
+.k-travel-title span {
   font-size: 40px;
 }
 
 @media (max-width: 769px) {
-  .kTravelTitle {
+  .k-travel-title {
     text-align: center;
     font-size: 70px;
     padding: 59px;
   }
-  .kTravelTitle span {
+  .k-travel-title span {
     display: block;
     font-size: 35px;
   }
 }
 
-#kDistrictSelect {
+#k-district-select {
   width: 30%;
   background: rgba(255, 255, 255, 0.7);
   border: 3px solid #ffffff;
@@ -221,54 +231,34 @@ table {
   -moz-appearance: none;
 }
 
-#kDistrictSelect:focus {
+#k-district-select:focus {
   outline: none;
 }
 
 @media (max-width: 769px) {
-  #kDistrictSelect {
+  #k-district-select {
     width: 50%;
   }
 }
 
-.kTravelFooter {
+.k-travel-footer {
   font-size: 14px;
   color: #ffffff;
 }
 
-.kTravelSource {
+.k-travel-source {
   margin-top: 15px;
   font-size: 14px;
-  color: #ffd366;
+  color: #f5d005;
 }
 
 /* content */
 .content {
   background-color: #f5f5f5;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .container {
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 @media (max-width: 2000px) {
@@ -277,7 +267,7 @@ table {
   }
 }
 
-.districtContent {
+.district-content {
   width: 100%;
   margin-bottom: 39px;
   display: -webkit-box;
@@ -292,13 +282,13 @@ table {
       flex-wrap: wrap;
 }
 
-.districtName {
+.district-name {
   font-size: 36px;
   color: #8a82cc;
   text-align: center;
 }
 
-.hotDistrict {
+.hot-district {
   margin-top: -28px;
   max-width: 800px;
   height: 112px;
@@ -308,7 +298,7 @@ table {
   border-radius: 5px;
 }
 
-.hotDistrict h2 {
+.hot-district h2 {
   font-size: 18px;
   color: #000000;
   font-weight: bold;
@@ -316,7 +306,7 @@ table {
   margin-left: 26px;
 }
 
-.hotDistrictList {
+.hot-district-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -330,7 +320,7 @@ table {
   padding-left: 25px;
 }
 
-.hotDistrictList li {
+.hot-district-list li {
   border-radius: 5px;
   text-align: center;
   margin-top: 14px;
@@ -338,7 +328,7 @@ table {
   margin-right: 20px;
 }
 
-.hotDistrictListLink {
+.hot-district-list-link {
   display: block;
   width: 130px;
   height: 42px;
@@ -351,28 +341,28 @@ table {
 /* min-width：大於某寬度 */
 /* max-width 小於某寬度 */
 @media (max-width: 769px) {
-  .hotDistrict {
+  .hot-district {
     width: 100%;
     height: 100%;
   }
-  .hotDistrictList {
+  .hot-district-list {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     padding: 20px;
   }
-  .hotDistrictList li {
+  .hot-district-list li {
     width: 100%;
     margin-right: 0px;
     margin-left: 0px;
   }
-  .hotDistrictListLink {
+  .hot-district-list-link {
     display: block;
     width: 100%;
   }
 }
 
 /* Card */
-.districtCard {
+.district-card {
   width: 464px;
   height: 100%;
   margin-top: 36px;
@@ -381,7 +371,7 @@ table {
 }
 
 @media (max-width: 769px) {
-  .districtCard {
+  .district-card {
     width: 100%;
     margin-top: 20px;
     margin-left: 0px;
@@ -389,7 +379,7 @@ table {
   }
 }
 
-.cardHeader {
+.card-header {
   width: 100%;
   height: 155px;
   display: -webkit-box;
@@ -404,18 +394,18 @@ table {
   padding: 14px 22px;
 }
 
-.cardHeader h2 {
+.card-header h2 {
   font-size: 24px;
   color: #ffffff;
   font-weight: bold;
 }
 
-.cardHeader p {
+.card-header p {
   font-size: 16px;
   color: #ffffff;
 }
 
-.cardBody {
+.card-body {
   /* height: 118px; */
   height: 100%;
   background: #ffffff;
@@ -435,7 +425,7 @@ table {
           justify-content: center;
 }
 
-.districtInfo {
+.district-info {
   padding-top: 16px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -445,25 +435,22 @@ table {
           align-items: center;
 }
 
-.districtInfo p {
+.district-info p {
   display: block;
   font-size: 16px;
   color: #000000;
   margin-left: 9px;
   line-height: 1.5;
-  white-space: nowrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 /* 增加 div 控制圖片外圍寬高 */
-.infoImg {
+.info-img {
   width: 20px;
   height: 20px;
   text-align: center;
 }
 
-.positionSet {
+.position-set {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -487,8 +474,8 @@ table {
           justify-content: center;
 }
 
-.pagePrev,
-.pageNext {
+.page-prev,
+.page-next {
   width: 50px;
   height: 24px;
   text-align: center;
@@ -496,8 +483,8 @@ table {
   margin-right: 18px;
 }
 
-.pagePrev a,
-.pageNext a {
+.page-prev a,
+.page-next a {
   display: block;
   padding: 5px;
   font-size: 14px;
@@ -505,19 +492,19 @@ table {
   text-decoration: none;
 }
 
-.pagePrev a:hover,
-.pageNext a:hover {
+.page-prev a:hover,
+.page-next a:hover {
   color: #559ac8;
   font-weight: bold;
 }
 
-.pageItem {
+.page-item {
   text-align: center;
   margin-left: 4px;
   margin-right: 4px;
 }
 
-.pageLink {
+.page-link {
   display: block;
   width: 25px;
   height: 25px;
@@ -528,7 +515,7 @@ table {
   border-radius: 50%;
 }
 
-.pageLink:hover {
+.page-link:hover {
   background-color: #559ac8;
   color: #ffffff;
   font-weight: bold;
@@ -536,7 +523,7 @@ table {
   transition: all 0.4s;
 }
 
-.pageLink.active {
+.page-link.active {
   pointer-events: none;
   cursor: default;
   background-color: #559ac8;
@@ -545,14 +532,14 @@ table {
   font-weight: bold;
 }
 
-.separationLine {
+.separation-line {
   width: 900px;
   margin-top: 37px;
   margin-bottom: 65px;
 }
 
 @media (max-width: 769px) {
-  .separationLine {
+  .separation-line {
     width: 100%;
   }
 }
@@ -651,8 +638,8 @@ table {
   }
 }
 
-/* goTop */
-.goTop {
+/* go-top */
+.go-top {
   display: none;
   position: fixed;
   bottom: 150px;
@@ -661,16 +648,9 @@ table {
 }
 
 @media (max-width: 1600px) {
-  .goTop {
-    display: none;
+  .go-top {
     bottom: 30px;
     right: 25px;
   }
-}
-
-/* utilities */
-.bgCover {
-  background-size: cover;
-  background-position: center center;
 }
 /*# sourceMappingURL=all.css.map */

@@ -1,14 +1,14 @@
 /* pagination */
 .pagination {
-  display: $d-flex;
+  display: flex;
   margin-top: 39px;
   margin-bottom: 39px;
   flex-wrap: wrap;
-  justify-content: $justify-content-center;
+  justify-content: center;
 }
 
-.pagePrev,
-.pageNext {
+.page-prev,
+.page-next {
   width: 50px;
   height: 24px;
   text-align: $text-align-center;
@@ -21,7 +21,7 @@
     padding: 5px;
     font-size: $font-size-s;
     color: #4a4a4a;
-    text-decoration: $none;
+    text-decoration: none;
 
     &:hover {
       color: $primary;
@@ -30,20 +30,20 @@
   }
 }
 
-.pageItem {
+.page-item {
   text-align: $text-align-center;
   margin-left: 4px;
   margin-right: 4px;
 }
 
-.pageLink {
+.page-link {
   display: block;
   width: 25px;
   height: 25px;
   padding: 5px;
   font-size: $font-size-s;
   color: #4a4a4a;
-  text-decoration: $none;
+  text-decoration: none;
   border-radius: 50%;
 
   &:hover {
@@ -54,7 +54,7 @@
   }
 
   &.active {
-    pointer-events: $none;
+    pointer-events: none;
     cursor: default;
     background-color: $primary;
     border-radius: 50%;

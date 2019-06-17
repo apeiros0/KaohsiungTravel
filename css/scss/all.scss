@@ -1,5 +1,6 @@
 @import "helpers/variables";
 @import "helpers/reset";
+@import "helpers/mixin";
 
 
 @import "components/layout";
@@ -14,6 +15,3 @@
 @import "components/pagination";
 @import "components/separationLine";
 @import "components/goTop";
-
-
-@import "helpers/utilities";

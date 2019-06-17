@@ -3,13 +3,13 @@
     let data = [];
     let displayData = [];
 
-    const kDistrictSelect = document.querySelector('#kDistrictSelect');
-    const districtName = document.querySelector('.districtName');
-    const districtContent = document.querySelector('.districtContent');
-    const hotDistrictList = document.querySelector('.hotDistrictList');
-    const hotDistrictListLink = document.querySelector('.hotDistrictListLink');
+    const kDistrictSelect = document.querySelector('#k-district-select');
+    const districtName = document.querySelector('.district-name');
+    const districtContent = document.querySelector('.district-content');
+    const hotDistrictList = document.querySelector('.hot-district-list');
+    const hotDistrictListLink = document.querySelector('.hot-district-list-link');
     const pagination = document.querySelector('.pagination');
-    const btnGoTop = document.querySelector('.goTop');
+    const btnGoTop = document.querySelector('.go-top');
 
 
 
@@ -134,30 +134,31 @@
         for (let i = start - contentNum; i < dataLen; i++) {
             // 顯示筆數
             str +=
-                `<div class="districtCard">
-                <div class="cardHeader bgCover" style="background-image: url('${ displayData[i].Picture1}');">
+                `<div class="district-card">
+                <div class="card-header bg-cover" style="background-image: url('${ displayData[i].Picture1}');">
                     <h2>${ displayData[i].Name}</h2>
                     <p>${ displayData[i].Zone}</p>                     
                 </div>
 
-                <div class="cardBody">
-                    <div class="districtInfo">
-                        <div class="infoImg"><img src="images/icons_clock.png" alt="icons_clock"></div>
-                        <p>${ displayData[i].Opentime}</p>
+                <div class="card-body">
+                    <div class="district-info">
+                        <div class="info-img"><img src="images/icons_clock.png" alt="icons_clock"></div>
+                        <p class="text-omit">${ displayData[i].Opentime}</p>
                     </div>
-                    <div class="districtInfo">
-                    <div class="infoImg"><img src="images/icons_pin.png" alt="icons_pin"></div>
-                    <p>${ displayData[i].Add}</p>
+
+                    <div class="district-info">
+                    <div class="info-img"><img src="images/icons_pin.png" alt="icons_pin"></div>
+                    <p class="text-omit">${ displayData[i].Add}</p>
                     </div>
                 
-                    <div class="positionSet">
-                        <div class="districtInfo">
-                            <div class="infoImg"><img src="images/icons_phone.png" alt="icons_phone"></div>
-                            <p>${ displayData[i].Tel}</p>  
+                    <div class="position-set">
+                        <div class="district-info">
+                            <div class="info-img"><img src="images/icons_phone.png" alt="icons_phone"></div>
+                            <p class="text-omit">${ displayData[i].Tel}</p>  
                         </div>
-                        <div class="districtInfo">
-                            <div class="infoImg"><img src="images/icons_tag.png" alt="icons_tag"></div>
-                            <p>${ displayData[i].Ticketinfo}</p>
+                        <div class="district-info">
+                            <div class="info-img"><img src="images/icons_tag.png" alt="icons_tag"></div>
+                            <p class="text-omit">${ displayData[i].Ticketinfo}</p>
                         </div>
                     </div>
                 </div>
@@ -174,8 +175,8 @@
             // Math.ceil() 最小整數：取大於這個數的最小整數
             pageLeng = Math.ceil(counter / contentNum);
 
-            const prev = `<li class="pagePrev"><a href="#">Prev</a></li>`;
-            const next = `<li class="pageNext"><a href="#">Next</a></li>`;
+            const prev = `<li class="page-prev"><a href="#">Prev</a></li>`;
+            const next = `<li class="page-next"><a href="#">Next</a></li>`;
             let str = ``;
 
             // if (pageLeng > limitPage) {
@@ -186,16 +187,16 @@
             for (let i = 1; i <= pageLeng; i++) {
                 // 顯示當下的頁碼
                 if (i == pageNum) {
-                    str += `<li class="pageItem"><a class="pageLink active" href="#">${i}</a></li>`;
+                    str += `<li class="page-item"><a class="page-link active" href="#">${i}</a></li>`;
                 } else {
-                    str += `<li class="pageItem"><a class="pageLink" href="#">${i}</a></li>`;
+                    str += `<li class="page-item"><a class="page-link" href="#">${i}</a></li>`;
                 }
             }
 
             pagination.innerHTML = prev + str + next;
 
         } else {
-            str = `<li class="pageItem"><a class="pageLink active" href="#">1</a></li>`;
+            str = `<li class="page-item"><a class="page-link active" href="#">1</a></li>`;
             pagination.innerHTML = str;
         }
 
@@ -286,7 +287,7 @@
         let str = ``;
         let color = ['#8a82cc', '#559AC8', '#F5D005', '#FFA782'];
         for (let i = 0; i < randomArr.length; i++) {
-            str += `<li style = "background: ${color[i]}";><a href="#" class="hotDistrictListLink">${result[randomArr[i]]}</a></li>`;
+            str += `<li style = "background: ${color[i]}";><a href="#" class="hot-district-list-link">${result[randomArr[i]]}</a></li>`;
         }
 
         hotDistrictList.innerHTML = str;

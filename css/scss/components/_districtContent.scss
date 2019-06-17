@@ -1,14 +1,14 @@
-// districtContent
-.districtContent {
+// district-content
+.district-content {
   width: $w-100;
   margin-bottom: 39px;
-  display: $d-flex;
-  justify-content: $justify-content-center;
+  display: flex;
+  justify-content: center;
   align-content: center;
   flex-wrap: wrap;
 }
 
-.districtName {
+.district-name {
   font-size: 36px;
   color: $secondary;
   text-align: $text-align-center;

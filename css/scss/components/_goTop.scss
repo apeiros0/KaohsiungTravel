@@ -1,6 +1,6 @@
-/* goTop */
-.goTop {
-  display: $d-none;
+/* go-top */
+.go-top {
+  display: none;
   position: fixed;
   bottom: 150px;
   right: 380px;
@@ -8,8 +8,7 @@
 }
 
 @media (max-width: 1600px) {
-  .goTop {
-    display: $d-none;
+  .go-top {
     bottom: 30px;
     right: 25px;
   }

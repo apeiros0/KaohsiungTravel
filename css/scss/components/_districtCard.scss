@@ -1,5 +1,5 @@
 /* Card */
-.districtCard {
+.district-card {
   width: 464px;
   height: $h-100;
   margin-top: 36px;
@@ -7,7 +7,7 @@
   margin-right: 8px;
 }
 @media (max-width: 769px) {
-  .districtCard {
+  .district-card {
     width: $w-100;
     margin-top: 20px;
     margin-left: 0px;
@@ -15,13 +15,12 @@
   }
 }
 
-.cardHeader {
+.card-header {
   width: $w-100;
   height: 155px;
-  display: $d-flex;
+  display: flex;
   align-items: flex-end;
-  justify-content: $justify-content-between;
-
+  justify-content: space-between;
   padding: 14px 22px;
 
   h2 {
@@ -36,7 +35,7 @@
   }
 }
 
-.cardBody {
+.card-body {
   /* height: 118px; */
 
   height: $h-100;
@@ -46,38 +45,35 @@
   padding-right: 23px;
   padding-left: 23px;
 
-  display: $d-flex;
-  flex-direction: $flex-direction-column;
-  justify-content: $justify-content-center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.districtInfo {
+.district-info {
   padding-top: 16px;
-  display: $d-flex;
-  align-items: $align-items-center;
+  display: flex;
+  align-items: center;
 
   p {
-    display: $d-block;
+    display: block;
     font-size: $font-size-base;
     color: $dark;
     margin-left: 9px;
     line-height: 1.5;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
   }
 }
 
 
 /* 增加 div 控制圖片外圍寬高 */
-.infoImg {
+.info-img {
   width: 20px;
   height: 20px;
   text-align: $text-align-center;
 }
 
-.positionSet {
-  display: $d-flex;
-  justify-content: $justify-content-between;
+.position-set {
+  display: flex;
+  justify-content: space-between;
   padding-bottom: 19px;
 }
