@@ -140,6 +140,30 @@ table {
   /* outline: 1px solid #00f; */
 }
 
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+}
+
+.clearfix {
+  clear: both;
+}
+
+.text-vertical-lr {
+  -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
+  -webkit-writing-mode: vertical-lr;
+}
+
+.text-vertical-rl {
+  -ms-writing-mode: tb-rl;
+      writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+}
+
 .bg-cover {
   background-size: cover;
   background-position: center center;

@@ -1,3 +1,28 @@
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+}
+
+// 清除浮動
+// bs4 已經有預設
+.clearfix {
+  clear: both;
+}
+
+// 文字垂直
+.text-vertical-lr {
+  writing-mode: vertical-lr;
+  -webkit-writing-mode: vertical-lr;
+}
+.text-vertical-rl {
+  writing-mode: vertical-rl;
+  -webkit-writing-mode: vertical-rl;
+}
+
+
 // 圖片置中
 .bg-cover {
   background-size: cover;
