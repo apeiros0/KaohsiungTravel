@@ -1,4 +1,5 @@
 @mixin ipad {
+    // 769px 是讓 ipad 可以滿版
     @media (max-width: 769px) {
         @content
     }
