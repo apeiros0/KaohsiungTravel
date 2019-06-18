@@ -2,9 +2,8 @@
   width: 900px;
   margin-top: 37px;
   margin-bottom: 65px;
-}
-@include ipad {
-  .separation-line {
+  
+  @include ipad {
     width: $w-100;
   }
 }

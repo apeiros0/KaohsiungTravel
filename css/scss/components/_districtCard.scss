@@ -5,9 +5,8 @@
   margin-top: 36px;
   margin-left: 8px;
   margin-right: 8px;
-}
-@include ipad {
-  .district-card {
+
+  @include ipad {
     width: $w-100;
     margin-top: 20px;
     margin-left: 0px;

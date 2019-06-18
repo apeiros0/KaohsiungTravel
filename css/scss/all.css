@@ -273,7 +273,7 @@ table {
           align-items: center;
 }
 
-@media (min-width: 769px) {
+@media (max-width: 2000px) {
   .container {
     max-width: 960px;
   }
