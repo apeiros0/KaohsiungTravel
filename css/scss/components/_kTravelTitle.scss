@@ -5,18 +5,15 @@
   font-weight: $font-weight-bold;
   padding: 65px;
 
-  span {
-    font-size: 40px;
-  }
-}
-
-@include ipad {
-  .k-travel-title {
+  @include ipad {
     text-align: $text-align-center;
     font-size: 70px;
     padding: 59px;
+  }
 
-    span {
+  span {
+    font-size: 40px;
+    @include ipad {
       display: block;
       font-size: 35px;
     }
@@ -44,12 +41,11 @@
   -webkit-appearance: none;
   -moz-appearance: none;
 
+  @include ipad {
+    width: 50%;
+  }
+
   &:focus {
     outline: none;
-  }
-}
-@include ipad {
-  #k-district-select {
-    width: 50%;
   }
 }

@@ -6,6 +6,11 @@
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
   border-radius: 5px;
 
+  @include ipad {
+    width: $w-100;
+    height: $h-100;
+  }
+
   h2 {
     font-size: $font-size-l;
     color: $dark;
@@ -22,12 +27,23 @@
   padding-right: 25px;
   padding-left: 25px;
 
+  @include ipad {
+    flex-wrap: wrap;
+    padding: 20px;
+  }
+
   li {
     border-radius: 5px;
     text-align: $text-align-center;
     margin-top: 14px;
     margin-left: 20px;
     margin-right: 20px;
+
+    @include ipad {
+      width: $w-100;
+      margin-right: 0px;
+      margin-left: 0px;
+    }
   }
 }
 
@@ -39,28 +55,10 @@
   font-size: 20px;
   color: $light;
   padding: 11px;
-}
 
-/* min-width：大於某寬度 (有包括設定的寬度) */
-/* max-width：小於某寬度 (有包括設定的寬度) */
-@include ipad {
-  .hot-district {
-    width: $w-100;
-    height: $h-100;
-  }
-  .hot-district-list {
-    flex-wrap: wrap;
-    padding: 20px;
-
-    li {
-      width: $w-100;
-      margin-right: 0px;
-      margin-left: 0px;
-    }
-  }
-
-  .hot-district-list-link {
+  @include ipad {
     display: block;
     width: $w-100;
   }
 }
+

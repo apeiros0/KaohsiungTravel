@@ -1,3 +1,5 @@
+// min-width：大於某寬度 (有包括設定的寬度)
+// max-width：小於某寬度 (有包括設定的寬度)
 @mixin ipad {
   // 769px 是讓 ipad 可以滿版
   @media (max-width: 769px) {

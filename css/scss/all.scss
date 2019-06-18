@@ -1,17 +1,22 @@
+// variables
 @import "helpers/variables";
+// CSS reset
 @import "helpers/reset";
+// Mixin
 @import "helpers/mixin";
+// Media Queries
 @import "helpers/grid";
 
+// main CSS
 @import "components/layout";
-@import "components/kTravelTitle";
-@import "components/footer";
 @import "components/content";
+@import "components/footer";
 
-
+@import "components/kTravelTitle";
 @import "components/districtContent";
 @import "components/hotDistrict";
 @import "components/districtCard";
-@import "components/pagination";
+
 @import "components/separationLine";
 @import "components/goTop";
+@import "components/pagination";

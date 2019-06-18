@@ -2,14 +2,12 @@
 .go-top {
   display: none;
   position: fixed;
-  bottom: 150px;
-  right: 380px;
+  bottom: 75px;
+  right: 38px;
   cursor: pointer;
-}
 
-@include ipad {
-  .go-top {
-    bottom: 30px;
+  @include ipad {
+    bottom: 50px;
     right: 25px;
   }
 }
