@@ -1,9 +1,11 @@
-/* layout */
+// layout
 .wrap {
   width: 1024px;
   margin: 0 auto;
 }
 
+
+// header
 .header {
   // 加 ../ 能夠找到路徑，有多層要繼續加 
   background-image: url("../../images/Hero.png");
@@ -12,9 +14,39 @@
   @include bg-cover;
 }
 
+
+
+// content
+.content {
+  background-color: $content-bg-color;
+  @include flex-column;
+}
+
+.container {
+  width: $w-100;
+  @include flex-column;
+  
+  @include desktop {
+    max-width: 960px;
+  }
+}
+
+
+// footer
 .footer {
   height: 90px;
   background: $primary;
   justify-content: center;
   @include flex-column;
+}
+
+.k-travel-footer {
+  font-size: $font-size-s;
+  color: $light;
+}
+
+.k-travel-source {
+  margin-top: 15px;
+  font-size: $font-size-s;
+  color: $warning;
 }
