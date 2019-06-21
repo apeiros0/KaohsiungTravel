@@ -15,12 +15,15 @@
 
     // 當前頁
     let pageNum = 1;
+
     // 每一個分頁顯示的數量 -> 4 筆
     let contentNum = 4;
+
     // 頁碼數量
     let pageLeng = 0;
-    // 限制的頁數
-    // let limitPage = 5;
+
+    // 限制頁數
+    let limitPage = 10;
 
     // -------------------------------------------------------------
     // ajax 載入資料
@@ -136,29 +139,29 @@
             str +=
                 `<div class="district-card">
                 <div class="card-header" style="background-image: url('${ displayData[i].Picture1}');">
-                    <h2>${ displayData[i].Name}</h2>
-                    <p>${ displayData[i].Zone}</p>                     
+                    <h2 class="card-header-title">${ displayData[i].Name}</h2>
+                    <p class="card-header-content">${ displayData[i].Zone}</p>                     
                 </div>
 
                 <div class="card-body">
                     <div class="district-info">
                         <div class="info-img"><img src="images/icons_clock.png" alt="icons_clock"></div>
-                        <p>${ displayData[i].Opentime}</p>
+                        <p class="district-info-content">${ displayData[i].Opentime}</p>
                     </div>
 
                     <div class="district-info">
                     <div class="info-img"><img src="images/icons_pin.png" alt="icons_pin"></div>
-                    <p>${ displayData[i].Add}</p>
+                    <p class="district-info-content">${ displayData[i].Add}</p>
                     </div>
                 
                     <div class="position-set">
                         <div class="district-info">
                             <div class="info-img"><img src="images/icons_phone.png" alt="icons_phone"></div>
-                            <p>${ displayData[i].Tel}</p>  
+                            <p class="district-info-content">${ displayData[i].Tel}</p>  
                         </div>
                         <div class="district-info">
                             <div class="info-img"><img src="images/icons_tag.png" alt="icons_tag"></div>
-                            <p>${ displayData[i].Ticketinfo}</p>
+                            <p class="district-info-content">${ displayData[i].Ticketinfo}</p>
                         </div>
                     </div>
                 </div>
@@ -175,13 +178,14 @@
             // Math.ceil() 最小整數：取大於這個數的最小整數
             pageLeng = Math.ceil(counter / contentNum);
 
-            const prev = `<li class="page-prev"><a href="#">Prev</a></li>`;
-            const next = `<li class="page-next"><a href="#">Next</a></li>`;
+            const prev = `<li class="page-direction"><a class="page-direction-link" href="#">Prev</a></li>`;
+            const next = `<li class="page-direction"><a class="page-direction-link" href="#">Next</a></li>`;
             let str = ``;
 
-            // if (pageLeng > limitPage) {
-            //     pageLeng = limitPage;
-            // } 
+            // 限制首頁頁數為 10 頁
+            if (pageLeng > limitPage) {
+                pageLeng = limitPage;
+            } 
 
             // 加進頁碼
             for (let i = 1; i <= pageLeng; i++) {
@@ -287,7 +291,7 @@
         let str = ``;
         let color = ['#8a82cc', '#559AC8', '#F5D005', '#FFA782'];
         for (let i = 0; i < randomArr.length; i++) {
-            str += `<li style = "background: ${color[i]}";><a href="#" class="hot-district-list-link">${result[randomArr[i]]}</a></li>`;
+            str += `<li class="hot-district-list-item" style="background: ${color[i]}";><a href="#" class="hot-district-list-link">${result[randomArr[i]]}</a></li>`;
         }
 
         hotDistrictList.innerHTML = str;

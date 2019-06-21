@@ -23,13 +23,13 @@
   padding: 14px 22px;
   @include bg-cover;
 
-  h2 {
+  &-title {
     font-size: 24px;
     color: $light;
     font-weight: $font-weight-bold;
   }
 
-  p {
+  &-content {
     font-size: $font-size-base;
     color: $light;
   }
@@ -55,7 +55,7 @@
   display: flex;
   align-items: center;
 
-  p {
+  .district-info-content {
     display: block;
     font-size: $font-size-base;
     color: $dark;

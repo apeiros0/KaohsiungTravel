@@ -131,7 +131,7 @@ table {
   border-spacing: 0;
 }
 
-* {
+body * {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -215,13 +215,13 @@ table {
 }
 
 .k-travel-footer {
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #ffffff;
 }
 
 .k-travel-source {
   margin-top: 15px;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #f5d005;
 }
 
@@ -259,7 +259,7 @@ table {
   border-radius: 3px;
   margin-top: 7px;
   padding: 12px;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-weight: bold;
   color: #000000;
   line-height: 21px;
@@ -318,8 +318,8 @@ table {
   }
 }
 
-.hot-district h2 {
-  font-size: 18px;
+.hot-district-title {
+  font-size: 1.125rem;
   color: #000000;
   font-weight: bold;
   margin-top: 20px;
@@ -348,7 +348,7 @@ table {
   }
 }
 
-.hot-district-list li {
+.hot-district-list-item {
   border-radius: 5px;
   text-align: center;
   margin-top: 14px;
@@ -357,7 +357,7 @@ table {
 }
 
 @media (max-width: 769px) {
-  .hot-district-list li {
+  .hot-district-list-item {
     width: 100%;
     margin-right: 0px;
     margin-left: 0px;
@@ -416,14 +416,14 @@ table {
   background-position: center center;
 }
 
-.card-header h2 {
+.card-header-title {
   font-size: 24px;
   color: #ffffff;
   font-weight: bold;
 }
 
-.card-header p {
-  font-size: 16px;
+.card-header-content {
+  font-size: 1rem;
   color: #ffffff;
 }
 
@@ -457,9 +457,9 @@ table {
           align-items: center;
 }
 
-.district-info p {
+.district-info .district-info-content {
   display: block;
-  font-size: 16px;
+  font-size: 1rem;
   color: #000000;
   margin-left: 9px;
   line-height: 1.5;
@@ -524,7 +524,7 @@ table {
           animation: change 5s infinite;
 }
 
-.line img {
+.line-img {
   position: absolute;
   z-index: 1;
   -webkit-animation: spin 4s linear infinite;
@@ -621,8 +621,7 @@ table {
           justify-content: center;
 }
 
-.page-prev,
-.page-next {
+.page-direction {
   width: 50px;
   height: 24px;
   text-align: center;
@@ -630,17 +629,15 @@ table {
   margin-right: 18px;
 }
 
-.page-prev a,
-.page-next a {
+.page-direction-link {
   display: block;
   padding: 5px;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #4a4a4a;
   text-decoration: none;
 }
 
-.page-prev a:hover,
-.page-next a:hover {
+.page-direction-link:hover {
   color: #559ac8;
   font-weight: bold;
 }
@@ -656,7 +653,7 @@ table {
   width: 25px;
   height: 25px;
   padding: 5px;
-  font-size: 14px;
+  font-size: 0.875rem;
   color: #4a4a4a;
   text-decoration: none;
   border-radius: 50%;

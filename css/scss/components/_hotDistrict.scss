@@ -11,7 +11,7 @@
     height: $h-100;
   }
 
-  h2 {
+  &-title {
     font-size: $font-size-l;
     color: $dark;
     font-weight: $font-weight-bold;
@@ -32,7 +32,7 @@
     padding: 20px;
   }
 
-  li {
+  &-item {
     border-radius: 5px;
     text-align: $text-align-center;
     margin-top: 14px;
