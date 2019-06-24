@@ -1,4 +1,4 @@
-.separation-line {
+.separation {
   width: 900px;
   margin-top: 37px;
   margin-bottom: 65px;
@@ -8,13 +8,14 @@
   }
 }
 
-.line {
+.separation-line {
   border: 1px groove $dark;
   position: relative;
 
   display: flex;
   justify-content: center;
   align-items: center;
+  
   animation: change 5s infinite;
 
   &::after {

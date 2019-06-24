@@ -3,13 +3,13 @@
     let data = [];
     let displayData = [];
 
-    const kDistrictSelect = document.querySelector('#k-district-select');
-    const districtName = document.querySelector('.district-name');
-    const districtContent = document.querySelector('.district-content');
-    const hotDistrictList = document.querySelector('.hot-district-list');
-    const hotDistrictListLink = document.querySelector('.hot-district-list-link');
-    const pagination = document.querySelector('.pagination');
-    const btnGoTop = document.querySelector('.go-top');
+    const kDistrictSelect = document.querySelector('#kDistrict-select');
+    const districtName = document.querySelector('.districtName');
+    const districtContent = document.querySelector('.districtContent');
+    const hotDistrictList = document.querySelector('.hotDistrict-list');
+    const hotDistrictListLink = document.querySelector('.hotDistrict-list-link');
+    const pagination = document.querySelector('.page');
+    const btnGoTop = document.querySelector('.goTop');
 
 
 
@@ -137,31 +137,31 @@
         for (let i = start - contentNum; i < dataLen; i++) {
             // 顯示筆數
             str +=
-                `<div class="district-card">
+                `<div class="card">
                 <div class="card-header" style="background-image: url('${ displayData[i].Picture1}');">
                     <h2 class="card-header-title">${ displayData[i].Name}</h2>
                     <p class="card-header-content">${ displayData[i].Zone}</p>                     
                 </div>
 
                 <div class="card-body">
-                    <div class="district-info">
-                        <div class="info-img"><img src="images/icons_clock.png" alt="icons_clock"></div>
-                        <p class="district-info-content">${ displayData[i].Opentime}</p>
+                    <div class="districtInfo">
+                        <div class="districtInfo-img"><img src="images/icons_clock.png" alt="icons_clock"></div>
+                        <p class="districtInfo-content">${ displayData[i].Opentime}</p>
                     </div>
 
-                    <div class="district-info">
-                    <div class="info-img"><img src="images/icons_pin.png" alt="icons_pin"></div>
-                    <p class="district-info-content">${ displayData[i].Add}</p>
+                    <div class="districtInfo">
+                    <div class="districtInfo-img"><img src="images/icons_pin.png" alt="icons_pin"></div>
+                    <p class="districtInfo-content">${ displayData[i].Add}</p>
                     </div>
                 
-                    <div class="position-set">
-                        <div class="district-info">
-                            <div class="info-img"><img src="images/icons_phone.png" alt="icons_phone"></div>
-                            <p class="district-info-content">${ displayData[i].Tel}</p>  
+                    <div class="positionSet">
+                        <div class="districtInfo">
+                            <div class="districtInfo-img"><img src="images/icons_phone.png" alt="icons_phone"></div>
+                            <p class="districtInfo-content">${ displayData[i].Tel}</p>  
                         </div>
-                        <div class="district-info">
-                            <div class="info-img"><img src="images/icons_tag.png" alt="icons_tag"></div>
-                            <p class="district-info-content">${ displayData[i].Ticketinfo}</p>
+                        <div class="districtInfo">
+                            <div class="districtInfo-img"><img src="images/icons_tag.png" alt="icons_tag"></div>
+                            <p class="districtInfo-content">${ displayData[i].Ticketinfo}</p>
                         </div>
                     </div>
                 </div>
@@ -291,7 +291,7 @@
         let str = ``;
         let color = ['#8a82cc', '#559AC8', '#F5D005', '#FFA782'];
         for (let i = 0; i < randomArr.length; i++) {
-            str += `<li class="hot-district-list-item" style="background: ${color[i]}";><a href="#" class="hot-district-list-link">${result[randomArr[i]]}</a></li>`;
+            str += `<li class="hotDistrict-list-item" style="background: ${color[i]}";><a href="#" class="hotDistrict-list-link">${result[randomArr[i]]}</a></li>`;
         }
 
         hotDistrictList.innerHTML = str;

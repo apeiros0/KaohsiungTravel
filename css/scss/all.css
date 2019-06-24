@@ -214,18 +214,18 @@ body * {
           align-items: center;
 }
 
-.k-travel-footer {
+.kTravel-footer {
   font-size: 0.875rem;
   color: #ffffff;
 }
 
-.k-travel-source {
+.kTravel-source {
   margin-top: 15px;
   font-size: 0.875rem;
   color: #f5d005;
 }
 
-.k-travel-title {
+.kTravel-title {
   display: block;
   font-size: 80px;
   color: #ffffff;
@@ -234,25 +234,25 @@ body * {
 }
 
 @media (max-width: 769px) {
-  .k-travel-title {
+  .kTravel-title {
     text-align: center;
     font-size: 70px;
     padding: 59px;
   }
 }
 
-.k-travel-title span {
+.kTravel-title span {
   font-size: 40px;
 }
 
 @media (max-width: 769px) {
-  .k-travel-title span {
+  .kTravel-title span {
     display: block;
     font-size: 35px;
   }
 }
 
-#k-district-select {
+#kDistrict-select {
   width: 30%;
   background: rgba(255, 255, 255, 0.7);
   border: 3px solid #ffffff;
@@ -271,16 +271,16 @@ body * {
 }
 
 @media (max-width: 769px) {
-  #k-district-select {
+  #kDistrict-select {
     width: 50%;
   }
 }
 
-#k-district-select:focus {
+#kDistrict-select:focus {
   outline: none;
 }
 
-.district-content {
+.districtContent {
   width: 100%;
   margin-bottom: 39px;
   display: -webkit-box;
@@ -295,13 +295,13 @@ body * {
       flex-wrap: wrap;
 }
 
-.district-name {
+.districtName {
   font-size: 36px;
   color: #8a82cc;
   text-align: center;
 }
 
-.hot-district {
+.hotDistrict {
   margin-top: -28px;
   max-width: 800px;
   height: 112px;
@@ -312,13 +312,13 @@ body * {
 }
 
 @media (max-width: 769px) {
-  .hot-district {
+  .hotDistrict {
     width: 100%;
     height: 100%;
   }
 }
 
-.hot-district-title {
+.hotDistrict-title {
   font-size: 1.125rem;
   color: #000000;
   font-weight: bold;
@@ -326,7 +326,7 @@ body * {
   margin-left: 26px;
 }
 
-.hot-district-list {
+.hotDistrict-list {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -341,14 +341,14 @@ body * {
 }
 
 @media (max-width: 769px) {
-  .hot-district-list {
+  .hotDistrict-list {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     padding: 20px;
   }
 }
 
-.hot-district-list-item {
+.hotDistrict-list-item {
   border-radius: 5px;
   text-align: center;
   margin-top: 14px;
@@ -357,14 +357,14 @@ body * {
 }
 
 @media (max-width: 769px) {
-  .hot-district-list-item {
+  .hotDistrict-list-item {
     width: 100%;
     margin-right: 0px;
     margin-left: 0px;
   }
 }
 
-.hot-district-list-link {
+.hotDistrict-list-link {
   display: block;
   width: 130px;
   height: 42px;
@@ -375,14 +375,14 @@ body * {
 }
 
 @media (max-width: 769px) {
-  .hot-district-list-link {
+  .hotDistrict-list-link {
     display: block;
     width: 100%;
   }
 }
 
 /* Card */
-.district-card {
+.card {
   width: 464px;
   height: 100%;
   margin-top: 36px;
@@ -391,7 +391,7 @@ body * {
 }
 
 @media (max-width: 769px) {
-  .district-card {
+  .card {
     width: 100%;
     margin-top: 20px;
     margin-left: 0px;
@@ -447,7 +447,7 @@ body * {
           justify-content: center;
 }
 
-.district-info {
+.districtInfo {
   padding-top: 16px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -457,7 +457,7 @@ body * {
           align-items: center;
 }
 
-.district-info .district-info-content {
+.districtInfo-content {
   display: block;
   font-size: 1rem;
   color: #000000;
@@ -469,13 +469,13 @@ body * {
 }
 
 /* 增加 div 控制圖片外圍寬高 */
-.info-img {
+.districtInfo-img {
   width: 20px;
   height: 20px;
   text-align: center;
 }
 
-.position-set {
+.positionSet {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -485,19 +485,19 @@ body * {
   padding-bottom: 19px;
 }
 
-.separation-line {
+.separation {
   width: 900px;
   margin-top: 37px;
   margin-bottom: 65px;
 }
 
 @media (max-width: 769px) {
-  .separation-line {
+  .separation {
     width: 100%;
   }
 }
 
-.line {
+.separation-line {
   border: 1px groove #000000;
   position: relative;
   display: -webkit-box;
@@ -513,7 +513,7 @@ body * {
           animation: change 5s infinite;
 }
 
-.line::after {
+.separation-line::after {
   content: "";
   position: absolute;
   width: 24px;
@@ -524,7 +524,7 @@ body * {
           animation: change 5s infinite;
 }
 
-.line-img {
+.separation-line-img {
   position: absolute;
   z-index: 1;
   -webkit-animation: spin 4s linear infinite;
@@ -591,8 +591,8 @@ body * {
   }
 }
 
-/* go-top */
-.go-top {
+/* goTop */
+.goTop {
   display: none;
   position: fixed;
   bottom: 75px;
@@ -601,14 +601,14 @@ body * {
 }
 
 @media (max-width: 769px) {
-  .go-top {
+  .goTop {
     bottom: 50px;
     right: 25px;
   }
 }
 
 /* pagination */
-.pagination {
+.page {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

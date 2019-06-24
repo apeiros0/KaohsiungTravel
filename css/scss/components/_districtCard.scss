@@ -1,5 +1,5 @@
 /* Card */
-.district-card {
+.card {
   width: 464px;
   height: $h-100;
   margin-top: 36px;
@@ -50,30 +50,28 @@
   justify-content: center;
 }
 
-.district-info {
+.districtInfo {
   padding-top: 16px;
   display: flex;
   align-items: center;
-
-  .district-info-content {
-    display: block;
-    font-size: $font-size-base;
-    color: $dark;
-    margin-left: 9px;
-    line-height: 1.5;
-    @include text-omit;
-  }
+}
+.districtInfo-content {
+  display: block;
+  font-size: $font-size-base;
+  color: $dark;
+  margin-left: 9px;
+  line-height: 1.5;
+  @include text-omit;
 }
 
-
 /* 增加 div 控制圖片外圍寬高 */
-.info-img {
+.districtInfo-img {
   width: 20px;
   height: 20px;
   text-align: $text-align-center;
 }
 
-.position-set {
+.positionSet {
   display: flex;
   justify-content: space-between;
   padding-bottom: 19px;
