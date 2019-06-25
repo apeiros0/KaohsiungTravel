@@ -36,19 +36,12 @@
 }
 
 .page-link {
-  display: block;
   width: 25px;
   height: 25px;
-  padding: 5px;
-  font-size: $font-size-s;
-  color: #4a4a4a;
-  text-decoration: none;
   border-radius: 50%;
 
   &:hover {
-    background-color: $primary;
     color: $light;
-    font-weight: $font-weight-bold;
     transition: all 0.4s;
   }
 

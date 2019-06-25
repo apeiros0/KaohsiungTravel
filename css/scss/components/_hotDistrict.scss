@@ -10,14 +10,14 @@
     width: $w-100;
     height: $h-100;
   }
+}
 
-  &-title {
-    font-size: $font-size-l;
-    color: $dark;
-    font-weight: $font-weight-bold;
-    margin-top: 20px;
-    margin-left: 26px;
-  }
+.hotDistrict-title {
+  font-size: $font-size-l;
+  color: $dark;
+  font-weight: $font-weight-bold;
+  margin-top: 20px;
+  margin-left: 26px;
 }
 
 .hotDistrict-list {
@@ -45,20 +45,19 @@
       margin-left: 0px;
     }
   }
-}
 
-.hotDistrict-list-link {
-  display: block;
-  width: 130px;
-  height: 42px;
-  text-decoration: none;
-  font-size: 20px;
-  color: $light;
-  padding: 11px;
-
-  @include ipad {
+  &-link {
     display: block;
-    width: $w-100;
+    width: 130px;
+    height: 42px;
+    text-decoration: none;
+    font-size: 20px;
+    color: $light;
+    padding: 11px;
+
+    @include ipad {
+      display: block;
+      width: $w-100;
+    }
   }
 }
-

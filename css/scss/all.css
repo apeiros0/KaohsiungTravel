@@ -252,7 +252,7 @@ body * {
   }
 }
 
-#kDistrict-select {
+.kTravel-select {
   width: 30%;
   background: rgba(255, 255, 255, 0.7);
   border: 3px solid #ffffff;
@@ -271,12 +271,12 @@ body * {
 }
 
 @media (max-width: 769px) {
-  #kDistrict-select {
+  .kTravel-select {
     width: 50%;
   }
 }
 
-#kDistrict-select:focus {
+.kTravel-select:focus {
   outline: none;
 }
 
@@ -455,6 +455,7 @@ body * {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  /* 增加 div 控制圖片外圍寬高 */
 }
 
 .districtInfo-content {
@@ -468,7 +469,6 @@ body * {
   text-overflow: ellipsis;
 }
 
-/* 增加 div 控制圖片外圍寬高 */
 .districtInfo-img {
   width: 20px;
   height: 20px;
@@ -649,20 +649,13 @@ body * {
 }
 
 .page-link {
-  display: block;
   width: 25px;
   height: 25px;
-  padding: 5px;
-  font-size: 0.875rem;
-  color: #4a4a4a;
-  text-decoration: none;
   border-radius: 50%;
 }
 
 .page-link:hover {
-  background-color: #559ac8;
   color: #ffffff;
-  font-weight: bold;
   -webkit-transition: all 0.4s;
   transition: all 0.4s;
 }

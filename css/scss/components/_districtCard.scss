@@ -54,21 +54,22 @@
   padding-top: 16px;
   display: flex;
   align-items: center;
-}
-.districtInfo-content {
-  display: block;
-  font-size: $font-size-base;
-  color: $dark;
-  margin-left: 9px;
-  line-height: 1.5;
-  @include text-omit;
-}
 
-/* 增加 div 控制圖片外圍寬高 */
-.districtInfo-img {
-  width: 20px;
-  height: 20px;
-  text-align: $text-align-center;
+  &-content {
+    display: block;
+    font-size: $font-size-base;
+    color: $dark;
+    margin-left: 9px;
+    line-height: 1.5;
+    @include text-omit;
+  }
+
+  /* 增加 div 控制圖片外圍寬高 */
+  &-img {
+    width: 20px;
+    height: 20px;
+    text-align: $text-align-center;
+  }
 }
 
 .positionSet {

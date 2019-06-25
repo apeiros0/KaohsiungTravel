@@ -191,16 +191,16 @@
             for (let i = 1; i <= pageLeng; i++) {
                 // 顯示當下的頁碼
                 if (i == pageNum) {
-                    str += `<li class="page-item"><a class="page-link active" href="#">${i}</a></li>`;
+                    str += `<li class="page-item"><a class="page-direction-link page-link active" href="#">${i}</a></li>`;
                 } else {
-                    str += `<li class="page-item"><a class="page-link" href="#">${i}</a></li>`;
+                    str += `<li class="page-item"><a class="page-direction-link page-link" href="#">${i}</a></li>`;
                 }
             }
 
             pagination.innerHTML = prev + str + next;
 
         } else {
-            str = `<li class="page-item"><a class="page-link active" href="#">1</a></li>`;
+            str = `<li class="page-item"><a class="page-direction-link page-link active" href="#">1</a></li>`;
             pagination.innerHTML = str;
         }
 
