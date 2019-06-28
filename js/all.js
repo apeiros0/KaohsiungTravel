@@ -312,6 +312,7 @@
         hotDistrictList.innerHTML = str;
     }
 
+    // 隨機跑數字
     function getRandom(min, max) {
         return Math.floor(Math.random() * (max - min));
     }
