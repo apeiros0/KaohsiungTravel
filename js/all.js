@@ -1,4 +1,5 @@
-(function () {
+// 避免汙染 global object
+(() => {
     // 撈回來的資料
     let data = [];
     let displayData = [];
@@ -185,7 +186,7 @@
             // 限制首頁頁數為 10 頁
             if (pageLeng > limitPage) {
                 pageLeng = limitPage;
-            } 
+            }
 
             // 加進頁碼
             for (let i = 1; i <= pageLeng; i++) {
@@ -239,7 +240,7 @@
 
     // -------------------------------------------------------------
     // 回到頂端
-    window.onscroll = function () { scrollFunction() }
+    window.onscroll = () => { scrollFunction() }
     // 偵測 scroll 的位置，超過 1000 顯示圖片
     function scrollFunction() {
         if (document.documentElement.scrollTop > 800) {
@@ -268,35 +269,50 @@
 
     // 隨機跑熱門行政區
     function hotDistrict(result) {
+        let copyArr = [];
         let randomArr = [];
         let max = result.length;
         let min = 0;
         const randomLength = 4;
 
-
-        // 過濾重複值
-        for (let i = 0; i < randomLength; i++) {
-            let randomNum = getRandom(min, max);
-            randomArr.push(randomNum);
-
-            for (var j = 0; j < i; j++) {
-                if (randomArr[i] == randomArr[j]) {
-                    randomArr.splice(j, 1);
-                    randomArr.push(randomNum - 1);
-                }
-            }
+        // 把每筆行政區 push 到 copyArr
+        for (var i in result) {
+            copyArr.push(result[i]);
         }
+
+        // 隨機跑 4 筆資料
+        for (let i = 0; i < randomLength; i++) {
+            // 取得隨機數
+            let randomNum = getRandom(min, max);
+
+            // 根據隨機數把行政區 push 到 randomArr
+            randomArr.push(copyArr[randomNum]);
+
+            // 刪除隨機跑到的元素
+            copyArr.splice(randomNum, 1);
+
+            // 減少隨機產生的數字 27 -> 26 -> 25 ... (不減少會超出 index，產生 undefined)
+            max--;
+        }
+
+
 
         // 顯示熱門行政區
         let str = ``;
         let color = ['#8a82cc', '#559AC8', '#F5D005', '#FFA782'];
         for (let i = 0; i < randomArr.length; i++) {
-            str += `<li class="hotDistrict-list-item" style="background: ${color[i]}";><a href="#" class="hotDistrict-list-link">${result[randomArr[i]]}</a></li>`;
+            str += 
+            `
+                <li class="hotDistrict-list-item" style="background: ${color[i]}";>
+                    <a href="#" class="hotDistrict-list-link">${randomArr[i]}</a>
+                </li>
+            `;
         }
 
         hotDistrictList.innerHTML = str;
     }
+
     function getRandom(min, max) {
-        return Math.floor(Math.random() * (max - min)) + min;
+        return Math.floor(Math.random() * (max - min));
     }
-}());
+})();
