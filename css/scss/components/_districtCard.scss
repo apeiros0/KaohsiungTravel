@@ -5,6 +5,11 @@
   margin-top: 36px;
   margin-left: 8px;
   margin-right: 8px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    padding: 10px;
+  }
 
   @include ipad {
     width: $w-100;
@@ -37,10 +42,11 @@
 
 .card-body {
   /* height: 118px; */
-
   height: $h-100;
   background: $light;
   box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+
+  border-bottom-right-radius: 45px;
 
   padding-right: 23px;
   padding-left: 23px;
