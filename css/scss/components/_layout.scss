@@ -1,14 +1,14 @@
 // layout
-.wrap {
-  width: 1024px;
-  margin: 0 auto;
-}
+// .wrap {
+//   width: 1024px;
+//   margin: 0 auto;
+// }
 
 
 // header
 .header {
   // 加 ../ 能夠找到路徑，有多層要繼續加 
-  background-image: url("../../images/Hero.png");
+  background-image: url("../../images/Hero.jpg");
   height: 380px;
   @include flex-column;
   @include bg-cover;
@@ -35,7 +35,7 @@
 // footer
 .footer {
   height: 90px;
-  background: $primary;
+  background-color: rgba($primary, .85);
   justify-content: center;
   @include flex-column;
 }

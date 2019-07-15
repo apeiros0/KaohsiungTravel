@@ -146,22 +146,22 @@
 
                 <div class="card-body">
                     <div class="districtInfo">
-                        <div class="districtInfo-img"><img src="images/icons_clock.png" alt="icons_clock"></div>
+                        <div class="districtInfo-img"><img src="images/icons_time.png" alt="icons_time"></div>
                         <p class="districtInfo-content">${ displayData[i].Opentime}</p>
                     </div>
 
                     <div class="districtInfo">
-                    <div class="districtInfo-img"><img src="images/icons_pin.png" alt="icons_pin"></div>
+                    <div class="districtInfo-img"><img src="images/icons_placeholder.png" alt="icons_placeholder"></div>
                     <p class="districtInfo-content">${ displayData[i].Add}</p>
                     </div>
                 
                     <div class="positionSet">
                         <div class="districtInfo">
-                            <div class="districtInfo-img"><img src="images/icons_phone.png" alt="icons_phone"></div>
+                            <div class="districtInfo-img"><img src="images/icons_telephone.png" alt="icons_telephone"></div>
                             <p class="districtInfo-content">${ displayData[i].Tel}</p>  
                         </div>
                         <div class="districtInfo">
-                            <div class="districtInfo-img"><img src="images/icons_tag.png" alt="icons_tag"></div>
+                            <div class="districtInfo-img"><img src="images/icons_pricetag.png" alt="icons_pricetag"></div>
                             <p class="districtInfo-content">${ displayData[i].Ticketinfo}</p>
                         </div>
                     </div>
@@ -303,8 +303,8 @@
         for (let i = 0; i < randomArr.length; i++) {
             str += 
             `
-                <li class="hotDistrict-list-item" style="background: ${color[i]}";>
-                    <a href="#" class="hotDistrict-list-link">${randomArr[i]}</a>
+                <li class="hotDistrict-list-item" style="border: 3px solid ${color[i]}">
+                    <a href="#" class="hotDistrict-list-link" style="color: ${color[i]};">${randomArr[i]}</a>
                 </li>
             `;
         }

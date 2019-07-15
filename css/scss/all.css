@@ -131,7 +131,9 @@ table {
   border-spacing: 0;
 }
 
-body * {
+*,
+*::after,
+*::before {
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -140,13 +142,8 @@ body * {
   font-family: "Microsoft JhengHei" !important;
 }
 
-.wrap {
-  width: 1024px;
-  margin: 0 auto;
-}
-
 .header {
-  background-image: url("../../images/Hero.png");
+  background-image: url("../../images/Hero.jpg");
   height: 380px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -198,7 +195,7 @@ body * {
 
 .footer {
   height: 90px;
-  background: #559ac8;
+  background-color: rgba(85, 154, 200, 0.85);
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -254,7 +251,7 @@ body * {
 
 .kTravel-select {
   width: 30%;
-  background: rgba(255, 255, 255, 0.7);
+  background-color: rgba(255, 255, 255, 0.7);
   border: 3px solid #ffffff;
   border-radius: 3px;
   margin-top: 7px;
@@ -305,9 +302,9 @@ body * {
   margin-top: -28px;
   max-width: 800px;
   height: 112px;
-  background: #ffffff;
-  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
-          box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
+          box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.3);
   border-radius: 5px;
 }
 
@@ -370,8 +367,8 @@ body * {
   height: 42px;
   text-decoration: none;
   font-size: 20px;
-  color: #ffffff;
   padding: 11px;
+  font-weight: bold;
 }
 
 @media (max-width: 769px) {
@@ -473,6 +470,7 @@ body * {
   width: 20px;
   height: 20px;
   text-align: center;
+  padding: 2px;
 }
 
 .positionSet {
