@@ -86,7 +86,7 @@
     // -------------------------------------------------------------
     // 顯示全部行政區
     function getAllDistrict() {
-        districtName.textContent = '高雄旅遊地';
+        districtName.textContent = 'Experiencing Kaohsiung';
         displayData = data;
         displayDistrict();
     }
@@ -114,7 +114,7 @@
         displayDistrict();
     }
 
-    // 更新各區景點
+    // 換頁更新各區景點
     function displayDistrict() {
         let str = ``;
 
@@ -265,6 +265,7 @@
 
         changeDistrict(e);
         districtName.textContent = e.target.textContent;
+        kDistrictSelect.value = e.target.textContent;
     }
 
     // 隨機跑熱門行政區
