@@ -175,13 +175,13 @@
     // -------------------------------------------------------------
     // 計算、顯示頁碼
     function calPagesNum(counter) {
+        let str = ``;
         if (counter > contentNum) {
             // Math.ceil() 最小整數：取大於這個數的最小整數
             pageLeng = Math.ceil(counter / contentNum);
 
             const prev = `<li class="page-direction"><a class="page-direction-link" href="#">Prev</a></li>`;
             const next = `<li class="page-direction"><a class="page-direction-link" href="#">Next</a></li>`;
-            let str = ``;
 
             // 限制首頁頁數為 10 頁
             if (pageLeng > limitPage) {
@@ -302,8 +302,8 @@
         let str = ``;
         let color = ['#8a82cc', '#559AC8', '#F5D005', '#FFA782'];
         for (let i = 0; i < randomArr.length; i++) {
-            str += 
-            `
+            str +=
+                `
                 <li class="hotDistrict-list-item" style="border: 3px solid ${color[i]}">
                     <a href="#" class="hotDistrict-list-link" style="color: ${color[i]};">${randomArr[i]}</a>
                 </li>
