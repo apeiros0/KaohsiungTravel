@@ -1,30 +1,50 @@
 /* pagination */
 .page {
   display: flex;
-  margin-top: 39px;
-  margin-bottom: 39px;
+  margin-top: 40px;
+  margin-bottom: 40px;
   flex-wrap: wrap;
   justify-content: center;
+
+  @include ipad {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: space-between;
+    z-index: 1;
+  }
 }
 
 .page-direction {
-  width: 50px;
-  height: 24px;
   text-align: $text-align-center;
+  margin-left: 20px;
+  margin-right: 20px;
 
-  margin-left: 18px;
-  margin-right: 18px;
+  @include ipad {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 
   &-link {
     display: block;
     padding: 5px;
     font-size: $font-size-s;
-    color: #4a4a4a;
+    color: $link-color;
     text-decoration: none;
 
-    &:hover {
-      color: $primary;
-      font-weight: $font-weight-bold;
+    @include ipad {
+      height: 100%;
+      font-size: $font-size-l * 1.5;
+      background-color: transparent;
+      color: $light;
+      padding: 10px;
+      &:hover {
+        background-color: rgba($dark, 0.5);
+      }
     }
   }
 }
@@ -33,6 +53,10 @@
   text-align: $text-align-center;
   margin-left: 4px;
   margin-right: 4px;
+
+  @include ipad {
+    display: none;
+  }
 }
 
 .page-link {

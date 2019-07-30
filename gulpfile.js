@@ -100,7 +100,7 @@ gulp.task('babel', () =>
         server: {
             baseDir: "./public/"
         },
-        reloadDebounce: 3000
+        reloadDebounce: 2000
     });
 });
 
@@ -110,9 +110,9 @@ gulp.task('babel', () =>
 // gulp.watch 編譯出錯後，會停止監控
 // *******************************
 gulp.task('watch', function () {
-    $.watch(['./source/**/*.jade', './source/scss/**/*.scss', './source/js/**/*.js'], function () {
+    $.watch(['./source/**/*.html', './source/scss/**/*.scss', './source/js/**/*.js'], function () {
         // start 直接呼叫 task
-        gulp.start('jade');
+        gulp.start('copy');
         gulp.start('sass');
         gulp.start('babel');
     });

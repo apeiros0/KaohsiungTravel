@@ -304,7 +304,7 @@
         for (let i = 0; i < randomArr.length; i++) {
             str +=
                 `
-                <li class="hotDistrict-list-item" style="border: 3px solid ${color[i]}">
+                <li class="hotDistrict-list-item" style="border-color: ${color[i]}">
                     <a href="#" class="hotDistrict-list-link" style="color: ${color[i]};">${randomArr[i]}</a>
                 </li>
             `;

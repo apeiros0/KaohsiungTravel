@@ -1,14 +1,7 @@
-// layout
-// .wrap {
-//   width: 1024px;
-//   margin: 0 auto;
-// }
-
-
 // header
 .header {
-  // 加 ../ 能夠找到路徑，有多層要繼續加 
-  background-image: url("../../images/Hero.jpg");
+  // 加 ../ 能夠找到路徑
+  background-image: url("../images/Hero.jpg");
   height: 380px;
   @include flex-column;
   @include bg-cover;
@@ -24,6 +17,7 @@
 
 .container {
   width: $w-100;
+  position: relative;
   @include flex-column;
   
   @include desktop {

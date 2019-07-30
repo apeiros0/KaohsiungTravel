@@ -1,21 +1,22 @@
 .kTravel-title {
+  width: 100%;
   display: block;
   font-size: 80px;
   color: $light;
   font-weight: $font-weight-bold;
-  padding: 65px;
+  padding: 65px 0;
+  text-align: center;
 
   @include ipad {
     text-align: $text-align-center;
-    font-size: 70px;
-    padding: 59px;
+    font-size: 60px;
   }
 
   span {
-    font-size: 90px;
+    font-size: 80px;
     @include ipad {
       display: block;
-      font-size: 61px;
+      font-size: 50px 0;
     }
   }
 }
@@ -25,24 +26,20 @@
   background-color: rgba($light, 0.7);
   border: 3px solid $light;
   border-radius: 3px;
-
-  margin-top: 7px;
-  padding: 12px;
-
-  font-size: $font-size-l;
+  margin-bottom: 20px;
+  padding: 15px;
+  font-size: $font-size-l * 1.2;
   font-weight: $font-weight-bold;
   color: $dark;
-  line-height: 21px;
-
+  // line-height: 20px;
   cursor: pointer;
-
   /* 移除箭頭樣式 */
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
 
   @include ipad {
-    width: 50%;
+    width: 100%;
   }
 
   &:focus {
