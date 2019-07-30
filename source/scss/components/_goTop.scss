@@ -5,6 +5,7 @@
   bottom: 75px;
   right: 38px;
   cursor: pointer;
+  z-index: 2;
 
   @include ipad {
     bottom: 50px;
