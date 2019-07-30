@@ -22,8 +22,19 @@ console.log(options)
 // clean 刪除資料夾
 // *******************************
 gulp.task('clean', function () {
-    return gulp.src(['./.tmp', './public'], {read: false})
+    return gulp.src(['./.tmp', './public'], {read: false}) // false阻止gulp讀取文件的內容，使此任務更快
         .pipe($.clean());
+});
+
+
+// *******************************
+// 複製檔案 + 資料夾
+// *******************************
+// 加 ! 不會取得該路徑
+gulp.task('copy', function () {
+    gulp.src(['./source/**/**', '!source/scss/**/**', '!source/js/**/**', '!source/css/**/**'])
+        .pipe(gulp.dest('./public/'))
+        .pipe(browserSync.stream())
 });
 
 
@@ -35,6 +46,10 @@ gulp.task('sass', function () {
         .pipe($.plumber())
         .pipe($.sourcemaps.init())
         .pipe($.sass().on('error', $.sass.logError)) // logError 是 Sass 的延伸套件
+        // .pipe($.sass({ 
+        //     outputStyle: 'nested', // 輸出方式
+        //     includePaths: ['./node_modules/bootstrap/scss']
+        //   }) // 取得 node_modules 的 bootstrap.scss
         // 在這個階段已經編譯完成
         .pipe($.postcss([autoprefixer()])) // 搭配 postcss 載入 autoprefixer
         .pipe($.if(options.env === 'production', $.cleanCss())) // 在輸出之前到編譯完成之間，加入 優化程式碼，使用 cleanCss，而非 cleanCSS
@@ -65,6 +80,16 @@ gulp.task('babel', () =>
         .pipe(gulp.dest('./public/js/'))
         .pipe(browserSync.stream()) // 自動重新整理
 );
+
+
+// gulp.task('vendorJs', function () {
+//     return gulp.src([ // 從 node_modules 取得 jquery bootstrap 的 js 檔
+//       './node_modules/jquery/dist/jquery.slim.min.js',
+//       './node_modules/bootstrap/dist/js/bootstrap.bundle.min.js'
+//     ])
+//     .pipe($.concat('vendor.js')) // 合併成 vendor.js
+//     .pipe(gulp.dest('./public/javascripts'))
+//   })
 
 
 // *******************************
@@ -116,9 +141,9 @@ gulp.task('deploy', function() {
 // *******************************
 // 合併 task
 // *******************************
-gulp.task('default', ['babel', 'sass', 'browser-sync', 'watch']); // 輸入 gulp 後，會依序編譯 ['task1', 'task2', 'task3'] 裡的任務
+gulp.task('default', ['copy', 'babel', 'sass', 'browser-sync', 'watch']); // 輸入 gulp 後，會依序編譯 ['task1', 'task2', 'task3'] 裡的任務
 
 
-gulp.task('build', gulpSequence('clean', 'babel', 'sass', 'image-min'))
+gulp.task('build', gulpSequence('clean', 'copy', 'babel', 'sass', 'image-min'))
 
 
