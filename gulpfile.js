@@ -32,9 +32,40 @@ gulp.task('clean', function () {
 // *******************************
 // 加 ! 不會取得該路徑
 gulp.task('copy', function () {
-    gulp.src(['./source/**/**', '!source/scss/**/**', '!source/js/**/**', '!source/css/**/**'])
+    gulp.src(['./source/**/**', '!source/**/**.html', '!source/**/**.jade','!source/scss/**/**', '!source/js/**/**', '!source/css/**/**'])
         .pipe(gulp.dest('./public/'))
         .pipe(browserSync.stream())
+});
+
+
+// *******************************
+// jade
+// *******************************
+gulp.task('jade', function () {
+    // var YOUR_LOCALS = {};
+
+    gulp.src('./source/**/*.jade')
+        .pipe($.plumber()) // 出錯時不會停止，會繼續執行 Gulp
+        // jade 編譯前取得資料
+        // .pipe($.data(function () {
+        //     // 使用 require() 載入外部 .json 資料
+        //     var khData = require('./source/data/data.json');
+        //     var menu = require('./source/data/menu.json');
+            
+        //     // 合併成物件
+        //     var source = {
+        //         'khData': khData,
+        //         'menu': menu
+        //     }
+        //     // console.log('jade', source); // 檢查是否有資料載入
+        //     return source; // 要回傳物件
+        // }))
+        .pipe($.jade({
+            // locals: YOUR_LOCALS
+            pretty: true, // 編譯完的 HTML 將會展開 (沒有壓縮的版本)
+        }))
+        .pipe(gulp.dest('./public/'))
+        .pipe(browserSync.stream()); // 自動重新整理
 });
 
 
@@ -110,9 +141,9 @@ gulp.task('babel', () =>
 // gulp.watch 編譯出錯後，會停止監控
 // *******************************
 gulp.task('watch', function () {
-    $.watch(['./source/**/*.html', './source/scss/**/*.scss', './source/js/**/*.js'], function () {
+    $.watch(['./source/**/*.jade', './source/scss/**/*.scss', './source/js/**/*.js'], function () {
         // start 直接呼叫 task
-        gulp.start('copy');
+        gulp.start('jade');
         gulp.start('sass');
         gulp.start('babel');
     });
@@ -141,9 +172,9 @@ gulp.task('deploy', function() {
 // *******************************
 // 合併 task
 // *******************************
-gulp.task('default', ['copy', 'babel', 'sass', 'browser-sync', 'watch']); // 輸入 gulp 後，會依序編譯 ['task1', 'task2', 'task3'] 裡的任務
+gulp.task('default', ['jade', 'copy', 'babel', 'sass', 'browser-sync', 'watch']); // 輸入 gulp 後，會依序編譯 ['task1', 'task2', 'task3'] 裡的任務
 
 
-gulp.task('build', gulpSequence('clean', 'copy', 'babel', 'sass', 'image-min'))
+gulp.task('build', gulpSequence('clean', 'jade', 'babel', 'sass', 'image-min'))
 
 
